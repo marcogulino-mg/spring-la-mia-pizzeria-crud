@@ -9,7 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/pizzas")
@@ -28,7 +27,8 @@ public class PizzaController {
 
     @GetMapping("/{id}")
     public String getMethodName(@PathVariable("id") int id, Model model) {
-        model.addAttribute("pizza", repository.findById(id).get());
+        Pizza pizza = repository.findById(id).get();
+        model.addAttribute("pizza", pizza);
         return "pizzas/show";
     }
 
