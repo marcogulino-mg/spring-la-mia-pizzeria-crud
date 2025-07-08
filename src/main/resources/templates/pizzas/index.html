@@ -8,6 +8,11 @@
   <body>
     <th:block th:replace="~{ fragments/header :: generic-header }"></th:block>
     <h1>localhost/pizzas</h1>
-    <p th:text="${pizzas}"></p>
+    <main>
+      <th:block
+        th:replace="~{ fragments/foodsCards :: foods-card(${pizzas}, pizzas)}"
+      ></th:block>
+    </main>
+    <th:block th:replace="~{ fragments/header ::bootstrapJS }"></th:block>
   </body>
 </html>
