@@ -34,9 +34,11 @@
             <a th:href="@{|/${url}/edit/${element.id}|}" class="btn btn-warning"
               >Edit</i
             ></a>
-             <a th:href="@{|/${url}/.../${element.id}|}" class="btn btn-danger"
-              >Delete</i
-            ></a>
+            <form th:action="@{|/${url}/delete/${element.id}|}" method="post">
+             <button class="btn btn-danger" type="submit" id="submitBtn"
+              >Delete
+             </button>
+            </form>
           </div>
         </div>
       </div>
