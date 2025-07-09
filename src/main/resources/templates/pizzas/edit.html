@@ -9,7 +9,7 @@
     <th:block th:replace="~{ fragments/header :: generic-header }"></th:block>
     <main>
       <th:block
-        th:replace="~{fragments/formFood :: form-food(@{'/pizzas/create'}) }"
+        th:replace="~{fragments/formFood :: form-food(@{'/pizzas/edit/' + ${pizza.id}}) }"
       ></th:block>
     </main>
     <th:block th:replace="~{ fragments/header ::bootstrapJS }"></th:block>

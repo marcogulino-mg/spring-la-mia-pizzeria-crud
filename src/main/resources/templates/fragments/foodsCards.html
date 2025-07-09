@@ -29,8 +29,14 @@
             <p class="card-text" th:text="${element.description}"></p>
             <h6 class="card-text" th:text="|${element.price} €|"></h6>
             <a th:href="@{|/${url}/${element.id}|}" class="btn btn-primary"
-              >Approfondisci</a
+              >Info</a
             >
+            <a th:href="@{|/${url}/edit/${element.id}|}" class="btn btn-warning"
+              >Edit</i
+            ></a>
+             <a th:href="@{|/${url}/.../${element.id}|}" class="btn btn-danger"
+              >Delete</i
+            ></a>
           </div>
         </div>
       </div>
